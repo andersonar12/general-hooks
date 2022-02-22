@@ -9,6 +9,7 @@ import { CallbackHook } from "./components/6 - memos/CallbackHook.jsx";
 import { MemoHook } from "./components/6 - memos/MemoHook.jsx";
 import { Memorize } from "./components/6 - memos/Memorize.jsx";
 import { Padre } from "./components/7 - tarea-memo/Padre.jsx";
+import { TodoApp } from "./components/8 - useReducer/TodoApp.jsx";
 // import { SimpleForm } from "./components/2 - useEffect/SimpleForm.jsx";
 import Navbar from "./components/Navbar.jsx";
 
@@ -59,6 +60,11 @@ function App() {
               <strong>Tarea Memo</strong>
             </h1>
             <Padre />
+            <hr />
+            <h1 className="text-decoration-underline">
+              <strong>useReducer</strong>
+            </h1>
+            <TodoApp />
           </div>
         </div>
       </div>

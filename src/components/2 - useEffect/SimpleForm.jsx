@@ -9,9 +9,17 @@ export const SimpleForm = () => {
 
   const { name, email } = formState;
 
-  useEffect(() => {}, []);
-  useEffect(() => {}, [formState]);
-  useEffect(() => {}, [email]);
+  //useEffect se usa  en ocasiones como el ngOnInit de Angular ya que se ejecuta cuando se monta el componente
+  useEffect(() => {
+    console.log("cleaned up");
+    // en la funcion del return se podria usar para unsuscribe's o limpiar localStorage- similar al ngOnDestoy de Angular
+    return () => {
+      console.log("cleaned up");
+    };
+  }, []); //se dispara un sola vez este useEffect por que tiene 0 dependecias en el "[]"
+
+  // useEffect(() => {}, [formState]);
+  // useEffect(() => {}, [email]);
   const handleInputChange = ({ target }) => {
     console.log(target.value);
     setFormState({
